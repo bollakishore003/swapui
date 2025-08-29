@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.db
+*.sqlite3
+
+# Virtual env
+.venv/
+env/
+venv/
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# VSCode
+.vscode/
+.codegpt/
+
+# Streamlit secrets (never commit secrets!)
+.streamlit/secrets.toml
+
+# Local environment file
+.env

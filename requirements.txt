@@ -1,0 +1,7 @@
+streamlit
+web3==6.*
+python-dotenv
+pandas
+plotly
+sqlalchemy
+asyncio
