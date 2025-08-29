@@ -10,7 +10,7 @@ from web3 import Web3
 
 load_dotenv()
 
-INFURA_WSS = os.getenv("INFURA_WSS", "wss://mainnet.infura.io/ws/v3/cf93996e62f944a3aa24b550be5f479e")
+INFURA_WSS = os.getenv("INFURA_WSS", "wss://mainnet.infura.io/ws/v3/cggggggggggggf944a3aa24b550be5f479e")
 
 # -------------------
 # Addresses / Decimals
