@@ -27,8 +27,8 @@ if not INFURA_WSS:
 USDT_DECIMALS = 6
 WETH_DECIMALS = 18
 VWAP_WINDOW = 30           # number of recent swaps to include in VWAP
-SPOT_REFRESH_SEC = 5       # how often to refresh spot call
-POLL_SLEEP_SEC = 2         # event polling interval
+SPOT_REFRESH_SEC = 2       # how often to refresh spot call
+POLL_SLEEP_SEC = 1        # event polling interval
 
 # Mainnet pools: token0=WETH, token1=USDT
 UNISWAP_V2_POOL = Web3.to_checksum_address("0x0d4a11d5EEaaC28EC3F61d100daF4d40471f1852")
@@ -263,4 +263,16 @@ else:
     st.write("No swaps yet in the window…")
 
 # Soft auto-refresh by pinging snapshot periodically
+# --- Auto-refresh (simple + reliable) ---
+# You can tweak the interval in seconds from the sidebar.
+with st.sidebar:
+    st.markdown("### Live refresh")
+    refresh_enabled = st.toggle("Auto refresh", value=True)
+    refresh_secs = st.number_input("Interval (seconds)", min_value=1, max_value=30, value=5, step=1)
+
 st.caption("App auto-updates continuously.")
+if refresh_enabled:
+    time.sleep(int(refresh_secs))
+    st.experimental_rerun()
+
+
