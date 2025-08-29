@@ -270,7 +270,7 @@ with st.sidebar:
     st.markdown("### Live refresh")
     refresh_enabled = st.toggle("Auto refresh", value=True)
     # Cloud can get unhappy with super-fast loops; 3–10s is a good range
-    refresh_secs = st.number_input("Interval (seconds)", min_value=3, max_value=30, value=5, step=1)
+    refresh_secs = st.number_input("Interval (seconds)", min_value=1, max_value=30, value=5, step=1)
 
 st.caption("App auto-updates continuously.")
 if refresh_enabled:
