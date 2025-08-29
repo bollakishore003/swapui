@@ -7,7 +7,7 @@ from dotenv import load_dotenv
 from web3 import Web3
 
 load_dotenv()
-INFURA_WSS = os.getenv("INFURA_WSS", "wss://mainnet.infura.io/ws/v3/cf93996e62f944a3aa24b550be5f479e")
+INFURA_WSS = os.getenv("INFURA_WSS", "wss://mainnet.infura.io/ws/v3/cf939ggg6e62f944gggggggggggggg550be5f479e")
 
 # ------------------- constants (Ethereum mainnet) -------------------
 USDT_DECIMALS = 6
